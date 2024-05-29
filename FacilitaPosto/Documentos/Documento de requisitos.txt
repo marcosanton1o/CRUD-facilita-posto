@@ -1,0 +1,129 @@
+ 
+
+
+
+
+Facilita Posto
+Documento de Requisitos 
+
+
+
+
+
+
+
+Nome: Marcos Antônio da Silva Lima
+Data: 27/06/2024
+
+
+
+Russas-CE
+30/05/2024
+
+Introdução:
+Nome do projeto e breve significado
+O sistema Facilita Posto é um sistema que visa gerenciar de forma fácil os postos de táxi de cidades, visando facilitar a organização de taxistas e postos de cidades.
+Visão geral do documento
+Requisitos Funcionais
+Denominam as funcionalidades específicas que o sistema deve oferecer, também sendo incluído suas operações e interações.
+
+Requisitos Não-funcionais
+Determinam os critérios de qualidade e desempenho que o sistema tem que atender, como usabilidade, desempenho e segurança.
+
+
+Descrição dos usuários
+Administrador de postos
+Administra todos os postos de táxi de um estado, sendo responsável pela administração dos postos de táxi.
+
+Administrador de posto
+Administra o posto que lhe é encarregado de liderar, podendo tanto ser taxista quanto administrador do posto.
+
+Taxista
+Um dos membros do posto que contém várias informações, como carro, o posto do qual participa e etc.
+
+
+
+Requisitos Funcionais:
+
+RF001 – Registro do taxista
+Descrição
+O sistema deve permitir o registro de novos usuários por meio do administrador do posto.
+Pré-condições
+O taxista não deve estar registrado no sistema e deve ter ao menos um posto disponível.
+Entradas
+Nome, e-mail, senha, número de telefone,.
+
+
+
+
+
+RF002 - Login
+Descrição
+O sistema deve permitir que os taxista e os administradores registrados façam login.
+Pré-condições
+O taxista ou administrador devem estar cadastrado no sistema.
+Entradas
+E-mail, senha, nome, telefone.
+
+
+
+RF003 – Gerenciar usuário
+Descrição
+O usuário, idependente de quem seja, poderá redefinir a senha, excluir a conta, ou sair da mesma.
+Pré-condições
+O usuário deverá estar logado na sua conta.
+Entradas
+Senha atual, nova senha e confirmar senha; confirmar exclusão; confirmar saída.
+
+RF004 – Gerenciamento de Clientes e Agendamentos
+Descrições
+O administrador poderá editar e excluir os clientes cadastrados e os agendamentos disponíveis.
+
+Pré-condições
+O administrador deve estar cadastrado e ter permições adequadas; o cliente deve estar registrado no sistema
+Entradas
+Edição Clientes: nome, e-mail e senha.
+Exclusão Clientes: confirmação exclusão;
+Edição Agendamentos: telefone, data e hora, serviço, observações e referências.
+Exclusão Agendamentos: confirmação exclusão.
+
+
+Requisitos Não-Funcionais
+RNF01 - Usabilidade
+É intuitivo para que o usuário e o admin possam navegar e interagir fácilmente com o sistema
+RNF02 - Responsividade
+O sistema é responsivo e graças a isso ele consegue se adaptar a diferentes dispositivos e tamanhos de tela (como Desktop, celular, tablet e entre outros).
+RNF03 - Validação dos campos
+Os campos de formulário possuem validações que podem verificar se o usuário está vazio ou incorreto.
+RNF04 - Mensagem de aviso
+O sistema mostra mensagens avisando quando tem algo incorreto
+
+RNF05 - Banco de Dados
+MySQL oferece um conjunto cheio de vantagens que o tornam uma escolha popular e eficiente para uma ampla variedade de aplicações. Sua combinação de desempenho, segurança e custo-efetividade faz dele uma solução de banco de dados ideal tanto para pequenas aplicações quanto para grandes sistemas corporativos.
+
+RNF06 - Linguagem PHP
+PHP oferece uma combinação poderosa de facilidade de uso, flexibilidade e compatibilidade. Suas características tornam a linguagem uma escolha excelente para o desenvolvimento de aplicações web, proporcionando benefícios significativos tanto para desenvolvedores iniciantes quanto para experientes. A adoção ampla e o suporte comunitário garantem que PHP continuará a ser uma tecnologia valiosa no desenvolvimento web.
+RNF07 - Bootstrap
+Bootstrap é uma ferramenta poderosa para o desenvolvimento de aplicações web, conhecida por sua abordagem responsiva, facilidade de uso, consistência visual, documentação abrangente e comunidade ativa. Ele acelera o desenvolvimento e garante que as aplicações sejam atraentes, funcionais e acessíveis em qualquer dispositivo.
+RNF08 - Parsley Validation
+O Parsley é uma biblioteca de validação de formulários em JavaScript que torna a validação de formulários no frontend poderosa e fácil.
+
+
+Requisitos mínimos para uso
+Navegadores Suportados
+Google Chrome: Versão 60 ou superior
+Mozilla Firefox: Versão 60 ou superior
+Microsoft Edge: Versão 15 ou superior
+Safari: Versão 10 ou superior
+Opera: Versão 50 ou superior
+Sistemas Operacionais
+Windows: Versão 7 ou superior
+macOS: Versão 10.12 (Sierra) ou superior
+Linux: Distribuições modernas (Ubuntu 16.04, Fedora 29, etc.)
+Ambiente de Desenvolvimento
+PHP: Versão 7.3 ou superior
+MySQL: Versão 5.7 ou superior
+Bibliotecas e Frameworks
+Bootstrap: Versão 4.0 ou superior
+jQuery: Versão 3.3.1 ou superior
+SweetAlert2: Versão 8.0.0 ou superior
