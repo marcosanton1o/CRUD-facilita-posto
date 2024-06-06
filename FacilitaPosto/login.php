@@ -6,88 +6,81 @@
     <link rel="stylesheet" href="node_modules\parsleyjs\src\parsley.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Document</title>
-    <style>
-      html,body{
-        height: 100%;
-      }
-        body{
-          color:white;
-    font-size:larger ;
-    font-family:sans-serif ;
-    background-color: #F1C059;
-}
-#taxiimg{
-  width:500px;
-  height:570px;
-}
-#login{
-  width: 500px;
-  background-color:#012533;
-}
-h1{
-    text-align: center;
-}
-
-{
-    border-radius:3
-}
-#taxilogo{
-  border-radius:10px;
-}
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+        <style>
+        body {
+          background-color: white;
+          color: black;
+          height: 100%;
+        }
+        img{
+          border-radius: 30px;
+        }
+        .form-container {
+          padding: 2rem;
+          max-width: 500px;
+          width: 100%;
+          font-size:20px;
+          font-family: 'Roboto', sans-serif;
+        }
+        #form {
+          background-color: #FFD700;
+          width: 100%;
+        }
+        #mostrarSenha{
+          font-size:10px;
+        }
+        #botao{
+            font-size: 20px; /* Altere o valor conforme necessário */
+            padding: 30px 20px;
+        }
+      </style>
 </head>
-<body class="d-flex align-items-center py-1">
-    <main class="d-flex justify-content-center w-100 m-auto flex-wrap" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-    <img src="imagens/taxilogo3.png" alt="" id="taxiimg" class="bg-tert" srcset="">
-        <form action="verify/logar.php" method="POST" class="p-4 mb-5" id="login" data-parsley-validate>
-            <div class="d-flex justify-content-center align-items-center flex-wrap">
-                <img src="imagens/taxilogo.jpg" alt="Logotipo" id="taxilogo" width="55px" height="55px">
-                <h1 class=" form-label mt-3 mb-1">Facilita posto</h1>
+<body class="d-flex align-items-center justify-content-center flex-col">
+    <main class="form-container">
+      <form action="verify/logar.php" method="POST" class=" p-5 rounded shadow" id="form">
+          <div class="mb-3 mt-3 d-flex justify-content-center align-items-center flex-wrap">
+            <img src="imagens/taxilogo.jpg" alt="" width="60px" heigth="60px">
+            <h2>FacilitaPosto</h2>
+          </div>
+          <div class="mb-3 mt-3 py-2">
+            <label for="inputEmail" class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control" required>        
+          </div>
+          <div class="mb-3 mt-3 py-2">
+            <label for="inputSenha" class="form-label">Senha:</label>
+            <input type="password" id="inputSenha" minlength="8" name="senha" class="form-control" required>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="form-check mt-3 mb-3">
+              <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarsenha()">
+              <label class="form-check-label " for="mostrarSenha">Mostrar senha</label>
             </div>
-          <div class="form-group mb-3">
-            <label for="login" class="form-label mt-2" required>Nome:</label>
-            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome" required>
+            <a href="login2.php" class="mt-3 mb-3">Entrar como Adm</a>
           </div>
-            <div class="form-group mb-3">
-                <label for="numeroTel" class="form-label ">Número:</label>
-                <input type="number" class="form-control" name="numerotel"  placeholder="Digite seu número" required>
-            </div>
-          <div class="form-group mb-3 ">
-            <label for="Email">Email:</label>
-            <input type="email" class="form-control" id="inputEmail"  name="email" placeholder="Digite seu email"  required>
+          <div class="d-flex justify-content-center mt-4 ">
+            <input class="btn btn-primary w-50 p-3 h1" type="submit" name="botao" id="botao" value="Login"></input>
           </div>
-          <div class="form-group mb-3 ">
-            <label for="Senha">Senha:</label>
-            <input type="password" class="form-control" id="inputSenha"  minlength="8" name="senha" placeholder="Digite sua senha" required>
-          </div>
-          <div class="form-check mt-2 d-inline ">
-            <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarsenha()">
-            <label class="form-check-label mb-2" for="mostrarSenha">Mostrar senha</label>
-          </div>
-          <div class="d-flex flex-column align-items-center justify-content-center">
-        <input type="submit" class="btn btn-primary py-2  mb-1" name="botao" value="Fazer login">
-        </div>
-            </form>
-        </main> 
-        <!--bootstrap-->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!--parsley-->
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/parsleyjs/dist/parsley.min.js"></script>
-        <script src="node_modules/parsleyjs/dist/i18n/pt-br.js"></script>
-  <script>
-    function mostrarsenha() {
-      var inputSenha = document.getElementById('inputSenha');
-      var checkbox = document.getElementById('mostrarSenha');
-      if (checkbox.checked) {
-        inputSenha.type = 'text';
-      } else {
-        inputSenha.type = 'password';
-      }
-    }
-  </script>
+      </form>
+    </main>
+    <!--parsley-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+          <script src="node_modules/parsleyjs/dist/parsley.min.js"></script>
+          <script src="node_modules/parsleyjs/dist/i18n/pt-br.js"></script>
+          <script>
+            function mostrarsenha() {
+              var inputSenha = document.getElementById('inputSenha');
+              var checkbox = document.getElementById('mostrarSenha');
+              if (checkbox.checked) {
+               inputSenha.type = 'text';
+              } else {
+                inputSenha.type = 'password';
+              }
+            }   
+          </script>
 </body>
 </html>
