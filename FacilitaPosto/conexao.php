@@ -1,5 +1,6 @@
 <?php
 $servername = "localhost:3308";
+//se der problema, apenas troque "localhost:3308" para localhost
 $username = "root";
 $password = "";
 
