@@ -16,6 +16,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
         
             $_SESSION['id_taxista'] = $dados['id_taxista'];
             $_SESSION['nome'] = $dados['nome'];
+            $_SESSION['email'] = $dados['email'];
             $_SESSION['posto_id_posto'] = $dados['posto_id_posto'];
             $_SESSION['admin_posto'] = $dados['admin_posto'];
 

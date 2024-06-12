@@ -46,9 +46,6 @@
           <li class="nav-item px-4 py-2">
             <a aria-current="page" href="posto.php">Posto</a>
           </li>
-          <li class="nav-item px-4 py-2">
-            <a aria-current="page" href="ajuda.php">Ajuda</a>
-          </li>
           <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <img class="mx-1" src="imagens/perfil.png" width="30" height="30" alt=""><?php echo $_SESSION['nome']?>

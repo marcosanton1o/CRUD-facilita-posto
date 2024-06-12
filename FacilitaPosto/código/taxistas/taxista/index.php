@@ -7,13 +7,15 @@ include('elementos/header.php');
 ?>
 <main>
 <?php
-$id_posto_usuario = ":posto_id_posto"
-
-$sqlcon = "SELECT COUNT(*) AS total_taxistas FROM posto WHERE membro.posto_id_posto = :id_posto";
-$resu = $conn->prepare($sqlcon);
-$resu->bindParam(':id_posto', $posto_id_usuario, PDO::PARAM_INT);
+$posto_id_posto = $_SESSION['posto_id_posto'];
+$sql = "SELECT membro.nome, membro.email, membro.idade, membro.id_taxista, membro.placa_carro 
+        FROM membro
+        JOIN posto ON membro.posto_id_posto = posto.id_posto
+        WHERE membro.posto_id_posto = :posto_id_posto";
+$resu = $conn->prepare($sql);
+$resu->bindParam(':posto_id_posto', $posto_id_posto, PDO::PARAM_INT);
 $resu->execute();
-$taxistas = $resu->fetch(PDO::FETCH_ASSOC);
+$taxistas = $resu->fetchAll();
 ?>
 </main>
 <?php
