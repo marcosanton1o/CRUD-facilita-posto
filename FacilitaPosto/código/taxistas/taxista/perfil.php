@@ -27,10 +27,6 @@ include('elementos/header.php');
     </div>
     </div>
   </div>
-<?php
-include('elementos/footer.php');
-?>
-
 <div class="mt-5 p-3">
 <table class="table">
   <h3>Informações:</h3>
@@ -101,8 +97,10 @@ if($_SESSION['admin_posto'] == 0){
       </table>
   </div>";
   }
-
 ?>
 </tbody>
 </table>
 </div>
+<?php
+include('elementos/footer.php');
+?>
