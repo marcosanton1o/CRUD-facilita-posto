@@ -1,9 +1,5 @@
 <?php
 include('elementos/comando.php');
-$sqlre = "SELECT * FROM membro";
-$resure = $conn->prepare($sqlre);
-$resure->execute();
-$taxistare = $resure->fetchAll();
 ?>
 <?php
 include('elementos/header.php');
@@ -34,3 +30,79 @@ include('elementos/header.php');
 <?php
 include('elementos/footer.php');
 ?>
+
+<div class="mt-5 p-3">
+<table class="table">
+  <h3>Informações:</h3>
+<tbody>
+<?php
+if($_SESSION['admin_posto'] == 0){
+  
+  echo "<th scope='row'>Cargo:</th>
+  <td>Taxista</td>
+</tr>
+<tr>
+  <th scope='row'>ID:</th>
+  <td>" . $_SESSION['id_taxista'] . "</td>
+</tr>
+<tr>
+  <th scope='row'>Nome:</th>
+  <td>" . $_SESSION['nome'] . "</td>
+</tr>
+<tr>
+  <th scope='row'>Idade:</th>
+  <td>" . $_SESSION['idade'] . "</td>
+</tr>
+<tr>
+  <th scope='row'>Placa do carro:</th>
+  <td>" . $_SESSION['placa_carro'] . "</td>
+</tr>
+<tr>
+  <th scope='row'>Número de Telefone:</th>
+  <td>" . $_SESSION['numeroTel'] . "</td>
+</tr>
+<tr>
+  <th scope='row'>Idade:</th>
+  <td>" . $_SESSION['idade'] . "</td>
+</tr>
+</tbody>
+</table>
+</div>";
+  }
+  else {
+    echo "<th scope='row'>Cargo:</th>
+                  <td>Administrador</td>
+              </tr>
+              <tr>
+                  <th scope='row'>ID:</th>
+                  <td>" . $_SESSION['id_taxista'] . "</td>
+              </tr>
+              <tr>
+                  <th scope='row'>Nome:</th>
+                  <td>" . $_SESSION['nome'] . "</td>
+              </tr>
+              <tr>
+                  <th scope='row'>Idade:</th>
+                  <td>" . $_SESSION['idade'] . "</td>
+              </tr>
+              <tr>
+                  <th scope='row'>Placa do carro:</th>
+                  <td>" . $_SESSION['placa_carro'] . "</td>
+              </tr>
+              <tr>
+                  <th scope='row'>Número de Telefone:</th>
+                  <td>" . $_SESSION['numeroTel'] . "</td>
+              </tr>
+              <tr>
+                  <th scope='row'>Idade:</th>
+                  <td>" . $_SESSION['idade'] . "</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>";
+  }
+
+?>
+</tbody>
+</table>
+</div>

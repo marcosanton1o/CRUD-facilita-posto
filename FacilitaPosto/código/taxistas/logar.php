@@ -19,9 +19,10 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
             $_SESSION['email'] = $dados['email'];
             $_SESSION['posto_id_posto'] = $dados['posto_id_posto'];
             $_SESSION['admin_posto'] = $dados['admin_posto'];
-
+            $_SESSION['placa_carro'] = $dados['placa_carro'];
+            $_SESSION['idade'] = $dados['idade'];
+            $_SESSION['numeroTel'] = $dados['numeroTel'];
             if($_SESSION['admin_posto'] == 0){
-            
             header('Location: taxista/index.php');
         }
         else{
