@@ -1,0 +1,66 @@
+FFD700 = amarelo
+#012533 = azul muito escuro
+
+<div class="col-sm-4 my-2">
+    <table class="table">
+          <h3>Informações do Posto:</h3>
+          <tbody>
+          <th scope='row d-flex justify-content-between'>Cargo:</th>
+  <td>Taxista</td>
+</tr>
+<tr>
+  <th scope='row'>ID:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['id_posto'] ?>
+</td>
+</tr>
+<tr>
+  <th scope='row'>Nome:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['local_estado']?><div>
+</td>
+</tr>
+<tr>
+  <th scope='row'>ID:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['data_criacao'] ?>
+</td>
+</tr>
+<tr>
+  <th scope='row'>Placa do carro:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['local_cidade']?><div>
+ 
+</td>
+</tr>
+<tr>
+  <th scope='row'>Número de Telefone:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['numero_Tel_Posto']?><div>
+   
+</td>
+</tr>
+<tr>
+  <th scope='row'>Idade:</th>
+  <td class='d-flex justify-content-between'><?php echo $postoinf['CEP']?><div>
+</td>
+</tr>
+          </tbody>
+        </table>
+      </div>
+
+<form method="POST" action="perfil.php" class='modal fade' id="modal2" tabindex="-1" aria-labelledby="modal2Label" data-bs-keyboard='false' tabindex='-1' aria-hidden='true'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h1 class='modal-title fs-5' id='staticBackdropLabel'>Modal title</h1>
+        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+      </div>
+      <div class='modal-body'>
+        ...
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+        <button type='button' class='btn btn-primary botao '>Excluir</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+</td>
+</tr>
