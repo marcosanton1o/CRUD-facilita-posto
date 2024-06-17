@@ -45,7 +45,7 @@
     <main class="form-container">
       <form action="verify/logar.php" method="POST" class=" p-5 rounded shadow" id="form">
           <div class="mb-3 mt-3 d-flex justify-content-center align-items-center flex-wrap">
-            <img src="../../imagens/taxilogo.jpg" alt="" width="60px" heigth="60px">
+            <img src="imagens/taxilogo.jpg" alt="" width="60px" heigth="60px">
             <h2>FacilitaPosto</h2>
           </div>
           <div class="mb-3 mt-3 py-2">
