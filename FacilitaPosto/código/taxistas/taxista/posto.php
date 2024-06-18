@@ -11,7 +11,7 @@ $sqlta = "SELECT * FROM membro
     $resuta->bindParam(':posto_id_posto', $posto_id_posto, PDO::PARAM_INT);
     $resuta->execute();
     $taxistas = $resuta->fetchAll(PDO::FETCH_ASSOC);
-
+    
     $sqlpo = "SELECT * FROM posto
 JOIN membro ON membro.posto_id_posto = posto.id_posto
 WHERE membro.posto_id_posto = :posto_id_posto";

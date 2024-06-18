@@ -2,14 +2,14 @@
 include('elementos/comando.php');
 ?>
 <?php
+$admin_postos_id_admin = $_SESSION['id_admin']
 $sqlpo = "SELECT * FROM posto
-              JOIN admin_postos ON posto.admin_postos_id_admin = admin_postos.admin_postos_id_admin
-              WHERE posto.admin_postos_id_admin = :admin_postos_id_admin";
-    $admin_postos_id_admin = "posto.admin_postos_id_admin"
+              JOIN admin_postos ON posto.admin_postos_id_admin = admin_postos.id_admin
+              WHERE posto.admin_postos_id_admin = :admin_postos_id_admin;";
     $resupo = $conn->prepare($sqlpo);
-    $resupo->bindValue(':admin_postos_id_admin', $admin_postos_id_admin, PDO::PARAM_INT);
+    $resuta->bindParam(':admin_postos_id_admin', $admin_postos_id_admin, PDO::PARAM_INT)
     $resupo->execute();
-    $posto = $resupo->fetchAll(PDO::FETCH_ASSOC);
+    $postos = $resupo->fetchAll(PDO::FETCH_ASSOC);
 
     /*$sqlpo = "SELECT * FROM posto
 JOIN membro ON membro.posto_id_posto = posto.id_posto
@@ -24,46 +24,9 @@ $postoinf = $resupo->fetchAll(PDO::FETCH_ASSOC);
 include('elementos/header.php');
 ?>
 <?php 
-if(count($taxistas) > 0){
+if(count($postos) > 0){
   ?>
   <div class="col-lg-8 mt-5 p-3 py-4">
-<table class="table mb-4">
-  <thead>
-    <tr>
-      <th>Cargo</th>
-      <th>ID</th>
-      <th>Nome</th>
-      <th>Idade</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <h2>Taxistas do Posto:</h2>
-<tbody>
-<?php
-foreach($taxistas as $taxista){
-if($taxista['admin_posto'] == 0){
-  
-    echo "<tr>"; 
-    echo  "<td> Taxista</td>";
-    echo  "<td>" . $taxista['id_taxista'] . "</td>"; 
-    echo  "<td>" . $taxista['nome'] . "</td>";
-    echo  "<td>" . $taxista['idade'] . "</td>";
-    echo  "<td>" . $taxista['email'] . "</td>";
-    echo  "</tr>";
-  }
-  else {
-    echo "<tr>"; 
-    echo  "<td>Administrador</td>";
-    echo  "<td>" . $taxista['id_taxista'] . "</td>"; 
-    echo  "<td>" . $taxista['nome'] . "</td>";
-    echo  "<td>" . $taxista['idade'] . "</td>";
-    echo  "<td>" . $taxista['email'] . "</td>";
-    echo  "</tr>";
-  }
-}
-?>
-</tbody>
-</table>
 <table class="table mt-2">
   <thead>
     <tr>
@@ -79,7 +42,7 @@ if($taxista['admin_posto'] == 0){
 <?php
 
 
-foreach($postoinf as $posto){
+foreach($postos as $posto){
   
     echo "<tr>"; 
     echo  "<td>" . $posto['id_posto'] . "</td>"; 

@@ -16,7 +16,7 @@ $resu->bindParam(':posto_id_posto', $posto_id_posto, PDO::PARAM_INT);
 $resu->execute();
 $taxistas = $resu->fetchAll();
 ?>
-        <img src="imagens/Design sem nome(1).png" class="container-fluid mt-5" height="700px" alt="">
+        <img src="" class="container-fluid mt-5" height="700px" alt="">
 </main>
 <?php
 include('elementos/footer.php');

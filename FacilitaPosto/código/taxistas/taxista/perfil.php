@@ -19,9 +19,8 @@ include('elementos/header.php');
       <div class="h6 mt-2 mx-4 text-white">Email: <?php echo $_SESSION['email'];?></div>
     </div>
 <div class="container-fluid">
-    <div class="col-lg-6 my-2 p-2">
+    <div class="col-lg-6 p-2">
     <table class="table">
-          <h3>Informações do Posto:</h3>
           <tbody>
 
 <div class="mt-5 p-3">
@@ -65,7 +64,7 @@ if($_SESSION['admin_posto'] == 0){
   <th scope='row'>CEP:</th>
   <td class='d-flex justify-content-between'>" . $postoinf['CEP'] . "
 </td>
-</tr>" 
+</tr>";
 }
 ?>
           </tbody>

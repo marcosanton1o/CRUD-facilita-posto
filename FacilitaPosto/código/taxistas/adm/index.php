@@ -15,8 +15,15 @@ $resu = $conn->prepare($sql);
 $resu->bindParam(':posto_id_posto', $posto_id_posto, PDO::PARAM_INT);
 $resu->execute();
 $taxistas = $resu->fetchAll();
+$contTax = count($taxistas);
 ?>
-        <img src="imagens/Design sem nome(1).png" class="container-fluid mt-5" height="700px" alt="">
+<div class="d-flex justify-content-center" style="margin-top:55px;">
+<a href="posto.php" class="card w-25" style="text-decoration: none;">
+  <div class="card-body d-flex bg-primary">
+    <h4 class="px-3">Quantidade de taxistas: <?php echo $contTax?></h4><img src="imagens/setap2.png" width="30px" height="30px" alt="" srcset="">
+  </div>
+</a>
+</div>
 </main>
 <?php
 include('elementos/footer.php');
