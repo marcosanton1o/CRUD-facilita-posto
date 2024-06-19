@@ -33,14 +33,14 @@
   </button>
   <div class="navbar-brand mt-1 d-flex align-items-center" href="#">
     <img id="logo" src="imagens/taxilogo.jpg" alt="" width="50px" heigth="50px">
-    <h4>Facilita Posto</h4>
+    <h4>FacilitaPosto</h4>
   </div>
   </div>
   <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
       <div class="offcanvas-header">
       <div class="navbar-brand mt-1 d-flex align-items-center" href="#">
     <img id="logo" src="imagens/taxilogo.jpg" alt="" width="50px" heigth="50px">
-    <h4>Facilita Posto</h4>
+    <h4>FacilitaPosto</h4>
   </div>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>

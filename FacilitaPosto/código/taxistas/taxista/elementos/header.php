@@ -59,7 +59,7 @@
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" href="perfil.php">Ver perfil</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="login.php">Trocar usuário</a></li>
+        <li><a class="dropdown-item" href="../trocar.php">Trocar usuário</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item btn btn-danger" href="verify/logout.php">Sair</a></li>
     </ul>

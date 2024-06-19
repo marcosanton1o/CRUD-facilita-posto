@@ -4,7 +4,7 @@ include('elementos/comando.php')
 <?php
 include('elementos/header.php');
 ?>
-<main class="">
+<main class="container-fluid">
 <?php
 $posto_id_posto = $_SESSION['posto_id_posto'];
 $sql = "SELECT membro.nome, membro.email, membro.idade, membro.id_taxista, membro.placa_carro 

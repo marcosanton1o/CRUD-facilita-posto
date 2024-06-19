@@ -23,7 +23,7 @@
   }
   .form-container {
     padding: 2rem;
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     font-size:20px;
     font-family: 'Roboto', sans-serif;
@@ -43,28 +43,40 @@
     </head>
 <body class="d-flex align-items-center justify-content-center flex-col">
     <main class="form-container">
-      <form action="logar.php" method="POST" class=" p-5 rounded shadow" id="form">
-      <a href="index.php" type="button" class="btn-close" aria-label="Close"><img src="imagens/setap2.png" width="30px" height="30px" alt="" srcset=""></a>
+      <form action="verify/cadastrarpos.php" method="POST" class=" p-5 rounded shadow" id="form">
+      <a href="posto.php" type="button" class="btn-close" aria-label="Close"><img src="imagens/setap.png" width="30px" height="30px" alt="" srcset=""></a>
           <div class="mb-3 mt-3 d-flex justify-content-center align-items-center flex-wrap">
-            <img src="taxista/imagens/taxilogo.jpg" alt="" width="60px" heigth="60px">
+            <img src="imagens/taxilogo.jpg" alt="" width="60px" heigth="60px">
             <h2>FacilitaPosto</h2>
           </div>
-          <div class="mb-3 mt-3 py-2">
-            <label for="inputEmail" class="form-label">Email:</label>
-            <input type="email" name="email" class="form-control" required>        
-          </div>
-          <div class="mb-3 mt-3 py-2">
-            <label for="inputSenha" class="form-label">Senha:</label>
-            <input type="password" id="inputSenha" minlength="8" name="senha" class="form-control" required>
-          </div>
-          
-            <div class="form-check mt-3 mb-3">
-              <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarsenha()">
-              <label class="form-check-label " for="mostrarSenha">Mostrar senha</label>
+          <div class="mr-1">
+            <label for="inputEmail" class="form-label">Telefone:</label>
+            <input type="number" name="tel" class="form-control" required>
             </div>
-            <a href="../admin/login.php" class="mt-3 mb-3 d-flex justify-content-center">Entrar como Adm</a>
+            <div class="mb-3 mt-3 py-2">
+            <label for="inputEmail" class="form-label">Data de criação:</label>
+            <input name="data" class="form-control" required>
+            </div>
+          <div class="mb-3 mt-3 py-2">
+            <label for="inputEmail" class="form-label">Capacidade:</label>
+            <input type="number" name="capacidade" class="form-control" required>
+            </div>
+            <div class="mb-3 mt-3 py-2">
+            <label for="inputEmail" class="form-label">Cidade:</label>
+            <input name="cidade" class="form-control" required>
+            </div>
+            <div class="mb-3 mt-3 py-2 row-sm-4 d-flex flex-row justify-content-between">
+          <div class="mr-1">
+            <label for="inputEmail" class="form-label">CEP:</label>
+            <input type="number" name="cep" class="form-control" required>
+            </div >
+            <div class="ml-1">
+            <label for="inputEmail" class="form-label">Estado:</label>
+            <input name="estado" class="form-control" required>  
+            </div>      
+          </div>
           <div class="d-flex justify-content-center mt-4">
-            <input class="btn btn-primary mx-1 px-5" type="submit" name="botao" id="botao" value="Login">
+            <input class="btn btn-primary mx-1 px-5" type="submit" name="botao" id="botao" value="Criar">
           </div>
       </form>
       
